@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MenuGosterim.master.cs" Inherits="Botas.MenuGosterim" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Navbar Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style type="text/css">
+        .auto-style1 {
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div style="height: 145px; width: 240px; margin-left:630px">
+
+            <img alt="" class="auto-style2" src="Photos/Botaslogo.png" />
+
+    </div>
+        
+  <nav class="navbar navbar-expand-lg bg-light" >
+    <div class="container-fluid" style="margin-left:450px">
+      <%--<a class="navbar-brand" href="#"><span class="auto-style1">Navbar</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>--%>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><span class="auto-style1">Çorbalar</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span class="auto-style1">Ana Yemekler</span></a><span class="auto-style1"> </span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span class="auto-style1">Salatalar</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span class="auto-style1">Tatlılar</span></a>
+          </li>
+             <li class="nav-item">
+            <a class="nav-link" href="#"><span class="auto-style1">İçecekler</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </form>
+</body>
+
+</html>

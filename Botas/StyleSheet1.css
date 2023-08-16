@@ -1,0 +1,43 @@
+﻿/* Add these styles to your existing CSS or create a new CSS file and link it in your page. */
+
+/* Apply fixed widths to table cells */
+.w-100 td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.w-100 th {
+    background-color: #f2f2f2;
+}
+
+/* Set fixed widths for the table cells */
+.w-100 td:nth-child(1) {
+    width: 208px;
+}
+
+.w-100 td:nth-child(2) {
+    width: 317px;
+}
+
+.w-100 td:nth-child(3) {
+    width: 265px;
+}
+
+.w-100 td:nth-child(4) {
+    width: 139px;
+}
+
+/* Additional styles for the DataList */
+.auto-style4 {
+    margin-left: 40px;
+    width: 208px;
+}
+
+.auto-style5 {
+    width: 139px;
+}
+
+/* Optional: Center the DataList within the Panel */
+#<%=DataList2.ClientID% > {
+    margin: 0 auto;
+}

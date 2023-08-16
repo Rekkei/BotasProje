@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Giris.master.cs" Inherits="Botas.Giris" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: xx-large;
+            color: #FF0000;
+            }
+        .auto-style2 {
+            width: 240px;
+            height: 145px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="height: 145px; width: 240px; margin-left: 600px;">
+            
+            &nbsp;<img alt="" class="auto-style2" src="Photos/Botaslogo.png" />
+            
+        </div>
+
+        <div style="width: 549px; height: 262px; margin-left: 450px;">
+            <div>
+
+                <p style="margin-left: 225px" class="auto-style1">
+                    Giriş</p>
+
+            </div>
+            <div style="margin-left: 70px; margin-top:25px">
+
+                <asp:Label ID="Label1" runat="server" Text="E-mail" style="color: #FF3300; font-weight: 700; font-size: large; margin-left:54px"></asp:Label>
+                 &nbsp;<asp:TextBox ID="TextBox1" runat="server"  TextMode="Email"></asp:TextBox>
+
+            </div>
+            <div style="margin-left: 140px; margin-top:25px">
+
+                <asp:Label ID="Label2" runat="server" Text="Şifre" style="font-weight: 700; color: #FF3300; font-size: large"></asp:Label>
+                &nbsp;<asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+               
+
+            </div>
+         </div>
+        <div style="height: 35px; width: 300px; margin-left: 580px; text-align: center; margin-top: 30px;">
+            <asp:Button ID="Button1" runat="server" Text="Giriş Yap" Width="180px" style="background-color:#FF0000" ForeColor="White" OnClick="Button1_Click1" />
+        </div>
+        
+    </form>
+</body>
+</html>

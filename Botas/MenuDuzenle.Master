@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MenuDuzenle.master.cs" Inherits="Botas.MenuDuzenle" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Sidebar Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style type="text/css">
+        table,th,td{
+            border:1px solid black;
+        }
+        .auto-style2 {
+            width: 238px;
+            height: 139px;
+        }
+        .auto-style4 {
+            width: 38px;
+        }
+        .auto-style5 {
+            width: 31px;
+        }
+        .auto-style6 {
+            font-weight: bold;
+        }
+        .auto-style7 {
+            margin-top: 13px;
+        }
+        .auto-style8 {
+            background-color: #C0C0C0;
+        }
+        .auto-style9 {
+            width: 96px;
+        }
+        .auto-style11 {
+            width: 96px;
+            height: 45px;
+        }
+        .auto-style12 {
+            width: 66px;
+            height: 45px;
+        }
+        .auto-style13 {
+            width: 66px;
+        }
+        .auto-style14 {
+            width: 83%
+        }
+        </style>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+<!-- Sidebar -->
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div style="height: 145px; width: 240px;">
+
+            <img alt="" class="auto-style2" src="Photos/Botaslogo.png" />
+
+    </div>
+    <div class="list-group list-group-flush">
+        <p class="text-center">Menü Düzenleme Sayfası</p>
+        <div class="text-center">
+        <asp:DataList ID="DataList1" runat="server">
+            <ItemTemplate>
+                <a href="AyriDuzenleyici.aspx?menuid=<%#Eval("menuid") %>"><asp:Label ID="Label1" runat="server" Text='<%# Eval("menuad") %>' BorderStyle="Groove" BorderWidth="2px" Width="231px" ></asp:Label></a>
+                 <a href="AyriDuzenleyici.aspx?menuid=<%#Eval("menuid") %>"><asp:Button ID="Button7" runat="server" Text="Sil" OnClick="Button6_Click" Width="47px" /></a>
+
+            </ItemTemplate>
+        </asp:DataList>
+        </div>
+      
+    &nbsp;<asp:Panel ID="Panel1" runat="server" Width="256px">
+            <table class="w-100">
+                <tr>
+                    <td class="auto-style4">
+                        <asp:Button ID="Button1" runat="server" Text="v" Width="30px" Height="30px" OnClick="Button1_Click" />
+                    </td>
+                    <td class="auto-style5">
+                        <strong>
+                        <asp:Button ID="Button2" runat="server" CssClass="auto-style6" Height="30px" Text="^" Width="30px" OnClick="Button2_Click" />
+                        </strong>
+                    </td>
+                    <td class="auto-style8">MENÜ EKLE</td>
+                </tr>
+            </table>
+        </asp:Panel>
+        <asp:Panel ID="Panel2" runat="server" Width="269px">
+            <table class="auto-style14">
+                <tr>
+                    <td class="auto-style11">Menü İsim:</td>
+                    <td class="auto-style12">
+                        <asp:TextBox ID="TextBox1" runat="server"  Width="170px" CssClass="offset-sm-0"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style9">&nbsp;</td>
+                    <td class="auto-style13">
+                        <asp:Button ID="Button3" runat="server" CssClass="auto-style7" Height="35px" Text="Ekle" Width="75px" OnClick="Button3_Click" />
+                    </td>
+                </tr>
+            </table>
+        </asp:Panel>
+        
+      </div>
+  </div>
+  <!-- /Sidebar -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+    <div class="container-fluid">
+        
+    </div>
+            </asp:ContentPlaceHolder>
+      </div>
+  </div>
+  <!-- /Page Content -->
+</div>
+<!-- /Sidebar -->
+
+<!-- Bootstrap ve jQuery kütüphaneleri -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Sidebar aç/kapa
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
+</script>
+
+    </form>
+
+</body>
+</html>
+<%--<div class="text-center">
+            </div>
+        </a>&nbsp;<a href="#" class="list-group-item list-group-item-action"><div class="text-center">
+            </div>
+        </a>&nbsp;<a href="#" class="list-group-item list-group-item-action"><div class="text-center">
+           </div>
+        </a>&nbsp;<a href="#" class="list-group-item list-group-item-action"><div class="text-center">
+            </div>--%>

@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu.master.cs" Inherits="Botas.Menu" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #f2f2f2;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bar {
+            flex: 1;
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .filled-bar {
+            height: 100%;
+            background-color: #888;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: #111;
+        }
+        .auto-style1 {
+            width: 100%;
+        }
+        table,th,td{
+            border:1px solid black;
+        }
+        
+        
+        .auto-style2 {
+            width: 169px;
+        }
+        .auto-style4 {
+            width: 493px;
+        }
+        .panel {
+            background-color: #c86432;
+            padding: 20px;
+            opacity: 0.5; /* 0.0 ile 1.0 arasında bir değer kullanın */
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <ul>
+       
+        
+            <asp:DataList ID="DataList1" runat="server" RepeatDirection="Horizontal">
+                
+               
+                <ItemTemplate>
+                    
+                            <td>
+                                <table class="auto-style1">
+                                    <tr>
+                                        <td>
+                                             <a href="Menu.aspx?kategoriid=<%#Eval("kategoriid") %>"><asp:Label ID="Label3" runat="server" Text='<%# Eval("kategoriad") %>'></asp:Label></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                       
+                    
+                </ItemTemplate>
+               
+                
+            </asp:DataList>
+        
+        
+    </ul>
+        <asp:Panel ID="Panel1" runat="server">
+            <asp:DataList ID="DataList2" runat="server">
+                  <ItemTemplate>
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style2">
+                        <asp:Image ID="Image1" runat="server" Height="167px" Width="263px" ImageUrl='<%# Eval("yemekresim") %>' />
+                    </td>
+                    <td class="auto-style4">
+                        <div >
+                            <asp:Label ID="Label4" runat="server" Text='<%# Eval("yemekad") %>'></asp:Label>
+                        </div>
+                        <div>
+                             <asp:Label ID="Label5" runat="server" Text='<%# Eval("yemekfiyat") %>'></asp:Label>
+                             &nbsp;<asp:Label ID="Label6" runat="server" Text="TL"></asp:Label>
+                        </div>
+                        
+                    </td>
+                    
+                </tr>
+            </table>
+                      </ItemTemplate>
+               
+                
+            </asp:DataList>
+        </asp:Panel>
+    </form>
+</body>
+</html>
+
